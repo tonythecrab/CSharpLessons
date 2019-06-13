@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace CarConstruct
 {
-    class Class1
+    public class Transmission
     {
+        public string TransmissionType { get; set; }
+
+        public Transmission(string transmissionType)
+        {
+            transmissionType = TransmissionType;
+        }
     }
 }

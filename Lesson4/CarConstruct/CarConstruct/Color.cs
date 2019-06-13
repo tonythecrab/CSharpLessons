@@ -4,9 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarConstruct
+namespace CarConstruction
 {
-    class Class1
+    public class Color
     {
+        public string colorValue { get; set; }
+
+        public Color(string ColorValue)
+        {
+            colorValue = ColorValue;
+        }
     }
 }
