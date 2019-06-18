@@ -11,7 +11,8 @@ namespace Human
         static void Main(string[] args)
         {
             Human human1 = new Human("Bob");
-            Human human2 = new Human("Bob");
+            Human human2 = new Human("Tom");
+            //human2 = human1;
             Human.compare(human1, human2);
             Console.ReadLine();
         }
@@ -37,17 +38,28 @@ namespace Human
 
         public static void compare(Human value1, Human value2)
         {
-            if (value1 == value2)
+            if (value1.Equals(value2))
             {
-            Console.WriteLine("true");
+                Console.WriteLine("true");
             }
             else
             {
                 Console.WriteLine("false");//всегда False? 
             };
         }
-             
-        
+
+        //{
+        //    if (value1 == value2) // сравниваем ссылки, не значения
+        //    {
+        //    Console.WriteLine("true");
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("false");//всегда False? 
+        //    };
+        //}
+
+
 
     }
 }

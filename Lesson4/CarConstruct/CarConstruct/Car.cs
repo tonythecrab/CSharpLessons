@@ -8,7 +8,7 @@ namespace CarConstruction
 {
     public class Car
     {
-        public Engine engine { get; set; } 
+        public Engine engine;  
         Color color;
         Transmission transmission;
         public Car(Engine eng, Color col, Transmission trans)
