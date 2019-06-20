@@ -28,7 +28,7 @@ namespace ConsoleApp1
 
         {
            public string name ;
-           public int age = 30;
+           public int age;
 
             public User(string fname, int Age) { name = fname; age = Age; }
 

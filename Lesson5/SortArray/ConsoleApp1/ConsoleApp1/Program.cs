@@ -13,7 +13,7 @@ namespace ConsoleApp1
 
             Random randomizer = new Random();
             
-            int[] nums = new int[3];
+            int[] nums = new int[10];
             //foreach (int i in nums)
             //{
             //    nums[i] = randomizer.Next(100); // почему всегда переписывает 1 значение массива?
