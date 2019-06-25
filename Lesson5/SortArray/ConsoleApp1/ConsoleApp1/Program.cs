@@ -14,14 +14,14 @@ namespace ConsoleApp1
             Random randomizer = new Random();
             
             int[] nums = new int[10];
-            //foreach (int i in nums)
-            //{
-            //    nums[i] = randomizer.Next(100); // почему всегда переписывает 1 значение массива?
-            //}
-            for (int i = 0; i < nums.Length; i++)
+            foreach (int i in nums)
             {
-                nums[i] = randomizer.Next(100);
+                nums[i] = randomizer.Next(100); // почему всегда переписывает 1 значение массива?
             }
+            //for (int i = 0; i < nums.Length; i++)
+            //{
+            //    nums[i] = randomizer.Next(100);
+            //}
 
             Array.Sort(nums);
             foreach (int n in nums)
