@@ -42,6 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UserArray.cs" />
+    <Compile Include="Validator.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="IValidator.cs" />
+    <Compile Include="IUser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

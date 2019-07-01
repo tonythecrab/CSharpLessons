@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Interface
 {
@@ -13,56 +10,27 @@ namespace Interface
             string name;
             string pass;
             string email;
-            do
+            UserArray UsersDatabase = new UserArray();
+            while (true)
             {
+
                 name = Console.ReadLine();
+                Console.WriteLine("Введите Имя");
                 pass = Console.ReadLine();
+                Console.WriteLine("Введите пароль");
                 email = Console.ReadLine();
-                if (name != "exit" && pass != "exit")
+                Console.WriteLine("Введите электронную почту");
+                if ((name != "exit" && pass != "exit") && email != "exit")
                 {
                     var user = new User(name, pass, email);
-
-                    Users[] users = new Users[10];
-                    for (int i = 0; i < i+1; i++)
+                    if (UsersDatabase.Array != null)
                     {
-                        users[i] = user;
+                        new Validator().ValidateUser(user, UsersDatabase);
                     }
-                       
-                    Console.WriteLine($"Welcome to the Matrix {user.Name}");
-                }
+                    UsersDatabase.ArrayExtention(UsersDatabase.Array, user);
+                } else break;
 
-
-            } while (name != "exit" && pass != "exit");
-        }
-
-        public class Users { }
-
-        public interface IUser
-        {
-            string Name { get; set; }
-            string Password { get; set; }
-            string Email { get; set; }
-
-            //string GetFullInfo();
-            
-        }
-        interface IValidator
-        {
-            void ValidateUser();
-        }
-
-        public class User : Users, IUser
-        {
-            public User(string name, string password, string email)
-            {
-                Name = name;
-                Password = password;
-                Email = email;
-            }
-            public string Name { get; set; }
-            public string Password { get; set; }
-            public string Email { get; set; }
-
+            } 
         }
     }
 }
